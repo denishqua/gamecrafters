@@ -1,5 +1,5 @@
 def initial_position():
-	return 2000
+	return 4
 
 def primitive(pos):
 	if pos == 0:
@@ -7,9 +7,7 @@ def primitive(pos):
 	return "UNDETERMINED"
 
 def gen_moves(pos):
-	if pos > 1:
-		return [-1, -2]
-	return [-1]
+	return [-1, -2][:pos]
 
 def do_move(pos, move):
 	return pos + move
